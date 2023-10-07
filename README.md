@@ -12,7 +12,7 @@ Kelas : TI.22.A1
 |2|Praktikum|[Click Here](#praktikum)|
 |3|Pertanyaan dan Tugas|[Click Here](#pertanyaandantugas)|
 
-## Instruksi Praktikum :
+## Instruksi Praktikum 
 > 1. Persiapkan text editor misalnya VSCode.
 > 2. Buat file baru dengan nama `lab2_css_dasar.html`
 > 3. Buat struktur dasar dari dokumen HTML.
@@ -20,7 +20,7 @@ Kelas : TI.22.A1
 > 5. Lakukan validasi dokumen css dengan mengakses https://jigsaw.w3.org/css-validator/
 
 
-## Praktikum :
+## Praktikum 
 ### 1. Membuat dokumen HTML
 ```
 <!DOCTYPE html>
@@ -173,7 +173,7 @@ background: #E42A42;
 
 ![Screenshot (25)](https://github.com/syifaaurellia/Lab2web/assets/115867244/f878a92d-b2f3-40cb-81d9-bb682245c62b)
 
-## Pertanyaan dan Tugas :
+## Pertanyaan dan Tugas 
 
 1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini.
 > Jawaban :
@@ -183,7 +183,7 @@ background: #E42A42;
 ![Screenshot (28)](https://github.com/syifaaurellia/Lab2web/assets/115867244/46d0c284-b14d-4a57-9e60-3487102335e7)
 
 
-> - Pada contoh ini, terdapat elemen `<h1> dengan class "title"` dan `elemen <p> dengan class "text"`. Class tersebut akan digunakan sebagai selector dalam CSS untuk mengubah properti dan nilai. Dalam file CSS (style.css), terdapat aturan CSS yang dideklarasikan untuk `class "title" dan "text"`. Aturan tersebut mengubah properti `"color"` pada elemen dengan class tersebut. Anda dapat mengubah nilai properti `"color"` pada file CSS sesuai keinginan Anda untuk melihat perubahan yang terjadi pada `judul (h1)` dan `paragraf (p)` dalam hal warna teks.
+- Pada contoh ini, terdapat elemen `<h1> dengan class "title"` dan `elemen <p> dengan class "text"`. Class tersebut akan digunakan sebagai selector dalam CSS untuk mengubah properti dan nilai. Dalam file CSS (style.css), terdapat aturan CSS yang dideklarasikan untuk `class "title" dan "text"`. Aturan tersebut mengubah properti `"color"` pada elemen dengan class tersebut. Anda dapat mengubah nilai properti `"color"` pada file CSS sesuai keinginan Anda untuk melihat perubahan yang terjadi pada `judul (h1)` dan `paragraf (p)` dalam hal warna teks.
 
 
 2. Apa perbedaan pendeklarasian CSS elemen `h1 {...}` dengan `#intro h1 {...}?` berikan penjelasannya!
@@ -192,3 +192,40 @@ background: #E42A42;
 - `h1 {...}` : Deklarasi ini akan merubah semua elemen "h1".
 
 - `#intro h1 {...}` : Deklarasi ini lebih spesifik, maksud nya adalah pendeklarasian yang mengacu kepada pemberian atribut pada elemen "h1" dengan menambahkan id "intro".
+
+
+3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+> Jawaban :
+
+- Ketika kita mendeklarasikan secara bersamaan antara **INTERNAL EKSTERNAL** dan **INLINE** yang akan ditampilkan pada Browser adalah **INLINE**, karena **INLINE** memiliki prioritas dibanding **EKSTERNAL** atau pun **INTERNAL** seperti contoh yang saya buat, saya membuat dokumen baru HTML kemudian saya buat Elemen `{h1}`yang kemudian saya akan deklarasikan di CSS **INTERNAL EKSTERNAL** dan juga **INLINE** Dengan property `{color}` dengan warna yang berbeda,jika **INTERNAL** `{color: red}` sementara **EKSTERNAL** `{color:blue;}` dan **INLINE** `{color: green;}` yang terpanggil dibrowser adalah **INLINE** karena memiliki prioritas.
+
+
+![Screenshot (29)](https://github.com/syifaaurellia/Lab2web/assets/115867244/d8bedc1c-b4a6-4555-b48a-1adb34f6cafd)
+
+
+- Pict di atas adalah deklarasi **INLINE** dan **INTERNAL**, sementara pict di bawah adalah deklarasi **EKSTERNAL**.
+
+
+![Screenshot (30)](https://github.com/syifaaurellia/Lab2web/assets/115867244/cdf81d44-c696-4249-a0f9-83dc10c78ade)
+
+
+- Jadi yang terpanggil adalah **CSS INLINE** karena memiliki prioritas tinggi dibanding CSS deklarasi lainnya.
+
+
+4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+> Jawaban :
+
+```
+( <p id="paragraf-1" class="text-paragraf"> )
+```
+- Yang terpanggil di browser adalah **ID** karena **ID** bersifat unik berbeda dengan **Class**. **Class** bisa digunakan banyak sementara **ID** hanya tertentu saja itu kenapa **ID** unik dan yang terpanggil di browser adalah **ID**.
+
+
+![Screenshot (31)](https://github.com/syifaaurellia/Lab2web/assets/115867244/d1c8431f-702c-4a7f-b307-b8e38d8c26f9)
+
+
+- Di atas saya menambahkan property `{color}` dan `{text-align}` untuk **ID {color: orchid}** dan **{text-align: center}** sementara Class yaitu **{color:palegreen}** dan **{text-align: left}**. Namun yang terpanggil di browser adalah **ID** yang property nya **{color: orchid}** dan juga **{text-align: center}**
+
+
+
+## Finish, Terima Kasih 
