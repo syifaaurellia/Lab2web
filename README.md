@@ -188,6 +188,7 @@ background: #E42A42;
 
 2. Apa perbedaan pendeklarasian CSS elemen `h1 {...}` dengan `#intro h1 {...}?` berikan penjelasannya!
 > Jawaban :
-`h1 {...}` : Deklarasi ini akan merubah semua elemen "h1".
 
-`#intro h1 {...}` : Deklarasi ini lebih spesifik, maksud nya adalah pendeklarasian yang mengacu kepada pemberian atribut pada elemen "h1" dengan menambahkan id "intro".
+- `h1 {...}` : Deklarasi ini akan merubah semua elemen "h1".
+
+- `#intro h1 {...}` : Deklarasi ini lebih spesifik, maksud nya adalah pendeklarasian yang mengacu kepada pemberian atribut pada elemen "h1" dengan menambahkan id "intro".
