@@ -19,6 +19,7 @@ Kelas : TI.22.A1
 > 4. Ikuti langkah-langkah praktikum yang akan dijelaskan berikutnya.
 > 5. Lakukan validasi dokumen css dengan mengakses https://jigsaw.w3.org/css-validator/
 
+
 ## Praktikum :
 ### 1. Membuat dokumen HTML
 ```
@@ -53,9 +54,10 @@ Kelas : TI.22.A1
   </body>
 </html>
 ```
-- Maka hasilnya akan seperti berikut : 
+> - Maka hasilnya akan seperti berikut : 
 
 ![Screenshot (12)](https://github.com/syifaaurellia/Lab2web/assets/115867244/a4b9ea90-d52f-43f2-8d78-870c6bb28540)
+
 
 ### 2. Mendeklerasikan CSS Internal
 ```
@@ -81,9 +83,111 @@ color:#6d6a6b;
 </style>
 </head>
 ```
-- Maka hasilnya akan seperti berikut :
+> - Maka hasilnya akan seperti berikut :
 
   ![Screenshot (13)](https://github.com/syifaaurellia/Lab2web/assets/115867244/01be2aa6-a4db-45ad-b058-26f651cbc5c8)
 
-  
+> - CSS internal adalah css yang filenya di letakan dalam html dengan pendeklarasian style.
 
+
+### 3. Menambahkan Inline CSS
+> - Menambahkan Inline CSS, kemudian tambahkan deklarasi inline CSS pada tag `<p>`
+```
+<p style="text-align: center; color: #ccd8e4;">
+```
+> - Maka hasilnya akan seperti berikut :
+
+![Screenshot (16)](https://github.com/syifaaurellia/Lab2web/assets/115867244/dc2966a3-55bf-44ba-b5ff-0c3d0e2c5e9f)
+
+
+### 4. Membuat CSS Eksternal
+> - Membuat CSS Eksternal dengan membuat file baru dengan nama **style_eksternal.css** kemudian buat deklarasi css seperti berikut ini.
+```
+nav {
+background: #20A759;
+color:#fff;
+padding: 10px;
+}
+nav a {
+color: #fff;
+text-decoration: none;
+padding:10px 20px;
+}
+nav .active,
+nav a:hover {
+background: #0B6B3A;
+}
+```
+> - Kemudian tambahkan <link untuk merujuk File CSS yang telah dibuat pada bagian `<head>`
+```
+<head>
+<!-- menyisipkan css eksternal -->
+<link rel="stylesheet" href="style_eksternal.css" type="text/css">
+</head>
+```
+
+> - Maka hasilnya akan seperti berikut :
+
+![Screenshot (17)](https://github.com/syifaaurellia/Lab2web/assets/115867244/5f78a0cf-48c6-4342-b203-07c23198b1fc)
+
+> - CSS ekternal adalah CSS yang file di tempatkan di luar file HTML dengan menambahkan link dalam HTML agar tertaut dengan file CSS
+
+### 5. Menambahkan CSS Selector
+> - Selanjutnya menambahkan CSS Selector menggunkan ID dan class Selector pada file **style_eksternal.css** dan menambahkan kode seperti berikut :
+```
+/* ID Selector */
+#intro {
+background: #418fb1;
+border: 1px solid #099249;
+min-height: 100px;
+padding: 10px;
+}
+#intro h1 {
+text-align: left;
+border: 0;
+color: #fff;
+}
+/* Class Selector */
+.button {
+padding: 15px 20px;
+background: #bebcbd;
+color: #fff;
+display: inline-block;
+margin: 10px;
+text-decoration: none;
+}
+.btn-primary {
+background: #E42A42;
+}
+```
+> - Maka hasilnya akan seperti berikut :
+
+![Screenshot (19)](https://github.com/syifaaurellia/Lab2web/assets/115867244/4f52e1e5-db63-446e-a492-8629d712e52a)
+
+> - CSS Selector terdiri atas selector ID, Selector Class, Dan Selector elemen Selector ID pendeklarasiannya yaitu dengan (#), Sedangkan Class pendeklarasiannya yaitu dengan (.), Dan Selector elemen pendeklarasiannya dengan elemen HTML sebagai contoh (p) yang akan di beri gaya pada CSS.
+
+### 6. MeLakukan validasi dokumen css dengan mengakses https://jigsaw.w3.org/css-validator/
+
+![Screenshot (24)](https://github.com/syifaaurellia/Lab2web/assets/115867244/b83d42a1-b3fd-4f97-bf22-e394ae012158)
+
+
+![Screenshot (25)](https://github.com/syifaaurellia/Lab2web/assets/115867244/f878a92d-b2f3-40cb-81d9-bb682245c62b)
+
+## Pertanyaan dan Tugas :
+
+1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini.
+> Jawaban :
+
+![Screenshot (27)](https://github.com/syifaaurellia/Lab2web/assets/115867244/486792ca-4b5d-4e17-87a3-5849bd9b9c37)
+
+![Screenshot (28)](https://github.com/syifaaurellia/Lab2web/assets/115867244/46d0c284-b14d-4a57-9e60-3487102335e7)
+
+
+> - Pada contoh ini, terdapat elemen `<h1> dengan class "title"` dan `elemen <p> dengan class "text"`. Class tersebut akan digunakan sebagai selector dalam CSS untuk mengubah properti dan nilai. Dalam file CSS (style.css), terdapat aturan CSS yang dideklarasikan untuk `class "title" dan "text"`. Aturan tersebut mengubah properti `"color"` pada elemen dengan class tersebut. Anda dapat mengubah nilai properti `"color"` pada file CSS sesuai keinginan Anda untuk melihat perubahan yang terjadi pada `judul (h1)` dan `paragraf (p)` dalam hal warna teks.
+
+
+2. Apa perbedaan pendeklarasian CSS elemen `h1 {...}` dengan `#intro h1 {...}?` berikan penjelasannya!
+> Jawaban :
+`h1 {...}` : Deklarasi ini akan merubah semua elemen "h1".
+
+`#intro h1 {...}` : Deklarasi ini lebih spesifik, maksud nya adalah pendeklarasian yang mengacu kepada pemberian atribut pada elemen "h1" dengan menambahkan id "intro".
